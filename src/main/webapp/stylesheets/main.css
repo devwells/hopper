@@ -1,0 +1,367 @@
+h1 {
+	font-family: 'Amatic SC', cursive;
+	font-size: 6em;
+	text-shadow: 4px 4px 4px #ccc;
+	color: #666;
+	margin: 0 0 .3em;
+}
+
+h2 {
+	font-family: 'Josefin Slab', serif;
+	font-size: 4em;
+	text-shadow: 4px 4px 4px #ccc;
+	color: #777;
+	margin: 0 0 .3em;
+	padding: 0 .5em;
+}
+
+p {
+	font-family: 'Josefin Slab', serif;
+	font-size: 20px;
+	padding: 0 60px;
+	margin-bottom: .5em;
+}
+
+.wrapper {
+	margin: 0 auto;
+	padding: 0 2em;
+	max-width: 1000px;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	background: #e9e7f2;
+}
+
+.navigation {
+	flex-shrink: 0;
+	margin-left: auto;
+	font-size: 3em;
+}
+.navigation li{
+	display: inline-block;
+	
+}
+
+.upperDiv {
+	padding: 0 20px 40px;
+	flex-shrink: 0;
+}
+
+.lowerDiv {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+}
+
+#editor {
+	flex-grow: 1;
+}
+
+/* Creature container ========================================== */
+.creatures {
+	list-style: none;
+	margin: 15px 0;
+	transition: opacity .3s;
+	text-align: center;
+}
+
+.creatures li {
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+	width: 260px;
+	list-style: none;
+	margin: 0 auto;
+	padding: 15px 30px;
+	user-select: none;
+}
+
+/* Creature ==================================================== */
+figure {
+	width: 200px;
+	height: 220px;
+	padding: 40px;
+	box-shadow: inset -10px -30px rgba(0, 0, 0, .06);
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+	border-radius: 50%;
+	animation: bobble 5s ease-in-out infinite;
+	transform-origin: center bottom;
+	transition: padding .3s, bottom .3s;
+	text-align: center;
+	background: cadetblue;
+}
+
+@keyframes bobble { 
+	33%{
+	transform: rotate(5deg);
+	}
+
+	66%{
+	transform:rotate(-5deg);
+ 	}
+}
+
+li:hover figure {
+	padding: 30px 40px;
+}
+
+li:hover .click-anim {
+	transform: translateY(-6px);
+}
+
+.click-anim {
+	transition: .3s cubic-bezier(.15, .60, .30, 1.9);
+	transform-origin: center bottom;
+}
+
+li:active .click-anim {
+	transform: scale(1.1);
+}
+
+/* Shadow ======================================================= */
+.shadow {
+	height: 20px;
+	background: rgba(0, 0, 0, .1);
+	width: 60%;
+	border-radius: 100%;
+	margin: -15px 0 0 30%;
+	transition: .3s;
+}
+
+li:hover .shadow {
+	background: rgba(0, 0, 0, .05);
+}
+
+li:active .shadow {
+	background: rgba(0, 0, 0, .08);
+	width: 70%;
+}
+
+/* Eyebrows ==================================================== */
+.eyebrow {
+	height: 15px;
+}
+
+.eyebrow:before, .eyebrow:after {
+	display: inline-block;
+	color: rgba(0, 0, 0, .9);
+	content: "-";
+	line-height: 0;
+	font: 5em/20px "Helvetica", Arial;
+	margin: 0 -1px;
+}
+.eyebrow:before {
+	transform: rotate(160deg);
+}
+.eyebrow:after {
+	transform: rotate(200deg);
+}
+
+li:hover .eyebrow:before, li:hover .eyebrow:after {
+	animation: eyebrow-move 2s;
+}
+
+@keyframes eyebrow-move { 
+	50%,90%{
+		height: 20px;
+	}
+
+	60%,80%{
+		height: 15px;
+ 	}
+	70%{
+		height: 18px;
+ 	}
+}
+
+
+
+/* Eyes ======================================================== */
+.eye {
+	display: inline-block;
+	width: 10px;
+	height: 15px;
+	margin: 0 5px 5px;
+	background: rgba(0, 0, 0, .9);
+	border-radius: 10px;
+	border-radius: 50%;
+	animation: blink 4s ease-in-out infinite;
+}
+
+@keyframes blink { 
+	90% {
+		transform: none;
+	}
+
+	95%{
+		transform:rotateX(90deg);
+ 	}
+}
+
+/* Moustache =================================================== */
+.moustache {
+	display: inline-block;
+	width: 100%;
+	height: 10px;
+}
+
+.moustache:before, .moustache:after {
+	display: inline-block;
+	color: rgba(0, 0, 0, .9);
+	content: "~";
+	font-size: 4em;
+	line-height: 0;
+	font: 5em/20px "Helvetica", Arial;
+	margin: 0 -4px;
+}
+
+.moustache:before {
+	transform: rotateY(180deg);
+}
+
+li:hover .moustache {
+	animation: moustache-wiggle 2s infinite;
+}
+
+@keyframes moustache-wiggle { 
+	50%,90%{
+		transform: none;
+	}
+
+	60%,80%{
+		transform:rotate(-5deg);
+ 	}
+	70%{
+		transform:rotate(5deg);
+ 	}
+}
+
+/* Mouth =================================================== */
+.mouth {
+	display: block;
+	width: 100%;
+	height: 20px;
+	margin: 5px auto 0;
+	background: rgba(0, 0, 0, .9);
+	border-radius: 10px 10px 100px 100px;
+	border-radius: 10px 10px 50% 50%;
+	transition: border-radius .5s, height .5s
+		cubic-bezier(.15, .60, .30, 1.9);
+	overflow: hidden;
+	line-height: 0;
+	transform-origin: center top;
+}
+
+.teeth:after, .teeth:before, .tooth:after {
+	display: inline-block;
+	content: "";
+	margin: 0 2px;
+	width: 15px;
+	height: 15px;
+	background: #eee;
+}
+
+li:nth-child(odd) .tooth:after {
+	margin-right: 17px;
+}
+
+li:nth-child(even) .tooth:after {
+	margin-left: 17px;
+}
+
+/* Behaviors =================================================== */
+.hungry .mouth {
+	animation: hungry .5s infinite;
+	border-radius: 30px 30px 50% 50%;
+	height: 80px;
+}
+
+.hungry .mouth:hover {
+	cursor: none;
+}
+
+@keyframes hungry { 
+	40%{
+	height: 40px;
+	}
+}
+.nervous .mouth {
+	animation: nervous .2s infinite;
+	border-radius: 40% 40% 5px 5px;
+}
+
+@keyframes nervous { 
+	50%{
+		height: 24px;
+	}
+}
+
+.hyper {
+	animation: hyper 2s infinite;
+}
+
+@keyframes hyper { 
+	25%{
+		transform: translateY(-10px);
+	}
+
+	15%,50%{
+		transform:rotateX(20deg);
+ 	}
+	75%{
+		transform:none;
+ 	}
+}
+
+.hyper .mouth {
+	height: 80px;
+	border-radius: 20px 20px 50% 50%;
+}
+
+/* Mobile-first Responsive======================================= */
+@media screen and (min-width:560px) {
+	header section, section {
+		width: 550px;
+	}
+	header section {
+		font-size: 1.2em;
+		text-align: left;
+		padding: 30px 15px;
+	}
+}
+
+@media screen and (min-width:820px) {
+	header section, section {
+		width: 840px;
+	}
+	header h1 {
+		font-size: 1.7em;
+		padding: 0 30px;
+	}
+	header ul {
+		padding: 0 30px;
+	}
+	hgroup {
+		text-align: left;
+		line-height: 7rem;
+		overflow: hidden;
+	}
+	.creatures {
+		animation: enter .7s .2s both;
+		transform-origin: center top;
+	}
+	@keyframes enter { 
+	0%{
+		transform: translateY(50px) scale(.8);
+		opacity: 0;
+	}
+	100%{
+		transform:none;
+	 }
+}
+
+.creatures li {
+	padding: 30px;
+}
+

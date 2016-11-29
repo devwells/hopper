@@ -1,0 +1,36 @@
+@font-face {
+  font-family: 'Amatic SC';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Amatic SC Regular'), local('AmaticSC-Regular'), url(http://themes.googleusercontent.com/static/fonts/amaticsc/v3/DPPfSFKxRTXvae2bKDzp5D8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+@font-face {
+  font-family: 'Amatic SC';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Amatic SC Bold'), local('AmaticSC-Bold'), url(http://themes.googleusercontent.com/static/fonts/amaticsc/v3/IDnkRTPGcrSVo50UyYNK73hCUOGz7vYGh680lGh-uXM.woff) format('woff');
+}
+@font-face {
+  font-family: 'Josefin Slab';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Josefin Slab'), local('Josefin Slab')
+  }
+
+
+/*
+font-family: 'Amatic SC', cursive;
+font-family: 'Slabo 27px', serif;
+font-family: 'Indie Flower', cursive;
+font-family: 'Pacifico', cursive;
+font-family: 'Josefin Slab', serif;
+font-family: 'Cinzel', serif;
+*/
+
+/* Captions ====================================================     
+    figcaption { padding:10px 0; font-size:12px; font-family:monospace; }
+
+    em { font-family:"Georgia", serif; }    
+    figcaption a { display:inline-block; color:#494636; border-bottom:1px solid transparent; white-space:nowrap; }
+    figcaption a:hover { text-decoration:underline; }
+*/

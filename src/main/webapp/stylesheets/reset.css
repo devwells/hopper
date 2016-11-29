@@ -1,0 +1,34 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+header, footer, section, figure, figcaption {
+	display: block;
+}
+
+body {
+	font: 300 100%/1.5 'Amatic SC', cursive;
+	color: #494636;
+	background: #FFF;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+section {
+	width: 290px;
+	margin: 0 auto;
+}
+
+a {
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.paused * {
+	animation-play-state: paused;
+	opacity: .5;
+	pointer-events: none;
+	transition: opacity .4s;
+}

@@ -1,0 +1,190 @@
+/* Header ====================================================== */
+hgroup {
+	text-align: center;
+	white-space: nowrap;
+}
+
+.logo, .make {
+	position: relative;
+	display: block;
+	color: #494636;
+}
+
+.logo {
+	font-size: 4rem;
+}
+
+.make {
+	font-size: 2rem;
+}
+
+header {
+	display: none;
+	color: #F8EEB9;
+	font-weight: 700;
+	width: 100%;
+	line-height: 2;
+	background: #3B382B center bottom no-repeat;
+	background-image: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, .05)
+		40%, rgba(0, 0, 0, .3) 100%);
+	background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, .05)
+		40%, rgba(0, 0, 0, .3) 100%);
+	background-size: 100% 45px;
+	user-select: none;
+}
+
+header ul {
+	list-style: none;
+}
+
+header li {
+	text-align: left;
+	font: 400 1em "Helvetica", sans-serif;
+	background: rgba(0, 0, 0, .4);
+	padding: 10px 15px;
+	margin-top: .4em;
+	border-radius: 5px;
+	color: #DAD1A4;
+	user-select: text;
+}
+
+i {
+	font-style: normal;
+	border-bottom: 2px solid transparent;
+	transition: .2s;
+}
+
+li:nth-child(5n+1) figure {
+	animation-delay: -3s;
+	background-color: cadetblue;
+}
+
+li:nth-child(5n+1) figure {
+	animation-delay: -3s;
+	background-color: tomato;
+}
+
+li:nth-child(5n+2) figure {
+	animation-delay: -1s;
+	background-color: dodgerblue;
+}
+
+li:nth-child(5n+3) figure {
+	animation-delay: -4s;
+	background-color: coral;
+}
+
+li:nth-child(5n+4) figure {
+	animation-delay: -.2 .5s;
+	background-color: limegreen;
+}
+
+li:hover figure {
+	padding: 30px 40px;
+}
+
+
+.logo, .make, .tweet {
+	display: inline-block;
+}
+
+.make {
+	padding: 0 30px;
+	margin-right: 45px;
+}
+
+.logo {
+	padding: 0 15px 0 45px;
+}
+
+.logo span, .make span {
+	border-bottom: 2px solid transparent;
+}
+
+.logo:hover span {
+	border-color: #494636;
+}
+
+.make {
+	user-select: none;
+	float: right;
+	border-radius: 0 0 30px 30px;
+	background: #3B382B;
+	color: #F8EEB9;
+	font-weight: 700;
+	box-shadow: -15px -30px #3B382B, 15px -30px #3B382B;
+	transition: .3s;
+}
+
+.make:hover span {
+	border-color: #F8EEB9;
+}
+
+.make:hover, .opened {
+	background: #29271E;
+	box-shadow: -15px -30px #29271E, 15px -30px #29271E;
+}
+
+.make:before, .make:after {
+	position: absolute;
+	top: 0;
+	display: block;
+	content: "";
+}
+
+.make:before, .make:after {
+	width: 30px;
+	height: 100%;
+	background: #F8EEB9
+}
+
+.make:before {
+	left: -30px;
+	border-radius: 0 15px 0 0;
+}
+
+.make:after {
+	right: -30px;
+	border-radius: 15px 0 0;
+}
+
+time {
+	display: block;
+	transition: .2s;
+	transition-delay: .2s;
+	opacity: 0;
+}
+
+li:hover time, li:nth-child(-n+2) time {
+	opacity: 1;
+}
+
+}
+
+/* Ears ======================================================= 
+.ear:before, .ear:after  {
+	display: inline-block;
+	content: "^";
+	color: black;
+	position: relative;
+	top:-40px;
+	width: 0;
+	height: 0;
+	/*animation: bobble 5s ease-in-out infinite;
+	border-left: 25px solid transparent !important; 
+	border-right: 25px solid transparent !important;
+	border-bottom: 50px solid;
+	margin: -20px 4px;
+	transform-origin: center bottom;
+}
+
+.ear:after {
+	left: 20px;
+	transform: rotate(30deg);
+}
+
+.ear:before {
+	right: 20px;
+	transform: rotate(330deg);
+}
+*/
